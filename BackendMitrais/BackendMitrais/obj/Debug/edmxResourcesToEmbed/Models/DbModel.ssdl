@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mitraistesModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="member">
+    <Key>
+      <PropertyRef Name="mobile_number" />
+    </Key>
+    <Property Name="mobile_number" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="last_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="date_of_birth" Type="date" Nullable="false" />
+    <Property Name="gender" Type="int" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="mitraistesModelStoreContainer">
+    <EntitySet Name="member" EntityType="Self.member" Schema="mitraistes" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
